@@ -8,24 +8,10 @@ html {
   box-sizing: inherit;
 }
 
+/* Vseobecne */
 body {
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
-}
-
-.paticka {
-  text-align: center;
-  font-size: 14px;
-  color: silver;
-}
-
-.paticka a {
-  color: silver;
-}
-
-.main-receipt {
-  min-height: 200px;
-  position: relative;
   color: white;
 }
 img {
@@ -34,44 +20,53 @@ img {
   filter: brightness(60%);
   object-fit: cover;
 }
-.part-of {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+/* Pismo */
+.p {
   font-size: 14px;
   font-weight: 400;
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-.small-receipt {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-.comments {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 14px;
-  font-weight: 400;
-  font-family: "Source Sans Pro", sans-serif;
 }
 h1 {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
   font-size: 28px;
   font-weight: 800;
   font-family: "Raleway", sans-serif;
 }
 h2 {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
   font-size: 18px;
   font-weight: 800;
   font-family: "Raleway", sans-serif;
+  padding: 10px;
 }
+
+.more-info {
+  position: absolute;
+  top: 0px;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+/* Hlavni recept */
+
+.main-receipt {
+  min-height: 200px;
+  position: relative;
+}
+
+.small-receipt {
+  min-height: 90px;
+  position: relative;
+}
+.other-receipts {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+/* Tablet */
 @media (min-width: 480px) {
   .main-receipt {
     min-height: 250px;
@@ -79,6 +74,7 @@ h2 {
   .other-receipts {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
     width: 100%;
   }
@@ -93,6 +89,8 @@ h2 {
     font-size: 22px;
   }
 }
+
+/* PC */
 @media (min-width: 860px) {
   main {
     display: flex;
@@ -103,6 +101,8 @@ h2 {
   }
   .other-receipts {
     width: 58%;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   .small-receipt {
     min-height: 200px;
@@ -113,4 +113,16 @@ h2 {
   h2 {
     font-size: 28px;
   }
+}
+
+/* Paticka */
+
+.paticka {
+  text-align: center;
+  font-size: 14px;
+  color: silver;
+}
+
+.paticka a {
+  color: silver;
 }
